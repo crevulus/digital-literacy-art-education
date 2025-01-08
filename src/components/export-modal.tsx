@@ -3,11 +3,11 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
+} from "@/components/ui/dialog";
 
 interface ExportModalProps {
-  open: boolean
-  onClose: () => void
+  open: boolean;
+  onClose: () => void;
 }
 
 export function ExportModal({ open, onClose }: ExportModalProps) {
@@ -24,6 +24,5 @@ export function ExportModal({ open, onClose }: ExportModalProps) {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
-

@@ -5,38 +5,12 @@ import { useRouter } from "next/navigation";
 import { AppHeader } from "@/components/app-header";
 import { ArtistList } from "@/components/artist-list";
 import { Grid } from "@/components/grid";
-import { ProgressBar } from "@/components/progress-bar";
 import { ExportModal } from "@/components/export-modal";
 import { AddArtistModal } from "@/components/add-artist-modal";
+import { Progress } from "@/components/ui/progress";
 
 // Mock data for the grid cells (5x5)
-const initialGridData = [
-  "🌙",
-  "👍",
-  "⭐",
-  "❤️",
-  "🌙",
-  "⭐",
-  "❓",
-  "❤️",
-  "⭐",
-  "👍",
-  "❤️",
-  "⭐",
-  "🌙",
-  "❓",
-  "👍",
-  "❓",
-  "🌙",
-  "👍",
-  "🌙",
-  "❤️",
-  "❤️",
-  "👍",
-  "❓",
-  "⭐",
-  "❓",
-].map((emoji, index) => ({
+const initialGridData = [].map((emoji, index) => ({
   id: index.toString(),
   filled: emoji !== "❓",
   content: emoji,
@@ -74,7 +48,7 @@ export default function GridPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader showIcons={true} onSave={handleSave} />
+      <AppHeader showIcons onSave={handleSave} />
 
       <main className="flex-1 container max-w-3xl mx-auto px-4 py-4 space-y-6">
         <ArtistList
@@ -85,10 +59,14 @@ export default function GridPage() {
 
         <Grid cells={gridData} onCellClick={handleCellClick} />
 
-        <ProgressBar
-          current={gridData.filter((cell) => cell.filled).length}
-          total={25}
-        />
+        <div className="space-y-2">
+          <Progress
+            value={(gridData.filter((cell) => cell.filled).length / 25) * 100}
+          />
+          <p className="text-center text-sm text-muted-foreground font-medium">
+            {gridData.filter((cell) => cell.filled).length}/25
+          </p>
+        </div>
       </main>
 
       <ExportModal

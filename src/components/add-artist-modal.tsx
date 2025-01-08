@@ -3,11 +3,11 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
+} from "@/components/ui/dialog";
 
 interface AddArtistModalProps {
-  open: boolean
-  onClose: () => void
+  open: boolean;
+  onClose: () => void;
 }
 
 export function AddArtistModal({ open, onClose }: AddArtistModalProps) {
@@ -24,6 +24,5 @@ export function AddArtistModal({ open, onClose }: AddArtistModalProps) {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
-
