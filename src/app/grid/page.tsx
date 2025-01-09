@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { AppHeader } from "@/components/app-header";
 import { ArtistList } from "@/components/artist-list";
 import { Grid } from "@/components/grid";
 import { ExportModal } from "@/components/export-modal";
@@ -10,7 +9,7 @@ import { AddArtistModal } from "@/components/add-artist-modal";
 import { Progress } from "@/components/ui/progress";
 
 // Mock data for the grid cells (5x5)
-const initialGridData = [].map((emoji, index) => ({
+const initialGridData = ["1", "2"].map((emoji, index) => ({
   id: index.toString(),
   filled: emoji !== "❓",
   content: emoji,
@@ -34,9 +33,9 @@ export default function GridPage() {
     { id: "3", name: "Dad", avatar: "/placeholder.svg?height=40&width=40" },
   ];
 
-  const handleSave = () => {
-    setShowExportModal(true);
-  };
+  // const handleSave = () => {
+  //   setShowExportModal(true);
+  // };
 
   const handleAddArtist = () => {
     setShowAddArtistModal(true);
@@ -47,8 +46,8 @@ export default function GridPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader showIcons onSave={handleSave} />
+    <div className="flex flex-col min-h-screen">
+      {/* <AppHeader showIcons onSave={handleSave} /> */}
 
       <main className="flex-1 container max-w-3xl mx-auto px-4 py-4 space-y-6">
         <ArtistList

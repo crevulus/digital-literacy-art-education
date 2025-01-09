@@ -121,7 +121,7 @@ export default function CanvasPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col flex-1 bg-background">
       <AppHeader
         showIcons={true}
         onBack={() => router.back()}
@@ -133,7 +133,7 @@ export default function CanvasPage() {
         <div className="relative aspect-square rounded-xl border bg-card">
           <canvas
             ref={canvasRef}
-            className="w-full h-full rounded-xl"
+            className="w-full h-full rounded-xl bg-white"
             onMouseDown={startDrawing}
             onMouseMove={draw}
             onMouseUp={stopDrawing}
@@ -161,23 +161,23 @@ export default function CanvasPage() {
           ))}
         </div>
 
-        <div className="grid grid-cols-4 gap-2">
+        <div className="flex justify-between">
           <Button
-            variant={tool === "brush" ? "default" : "outline"}
+            variant={tool === "brush" ? "noShadow" : "neutral"}
             className="aspect-square"
             onClick={() => setTool("brush")}
           >
             <Paintbrush2 className="h-6 w-6" />
           </Button>
           <Button
-            variant={tool === "eraser" ? "default" : "outline"}
+            variant={tool === "eraser" ? "noShadow" : "neutral"}
             className="aspect-square"
             onClick={() => setTool("eraser")}
           >
             <Eraser className="h-6 w-6" />
           </Button>
           <Button
-            variant="outline"
+            variant="neutral"
             className="aspect-square"
             onClick={handleUndo}
             disabled={undoStack.length <= 1}
@@ -185,7 +185,7 @@ export default function CanvasPage() {
             <Undo2 className="h-6 w-6" />
           </Button>
           <Button
-            variant="outline"
+            variant="neutral"
             className="aspect-square"
             onClick={handleClear}
           >

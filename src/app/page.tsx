@@ -21,16 +21,10 @@ export default function LandingPage() {
   const [activeGrid] = useState(mockActiveGrid);
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <header className="border-b">
-        <div className="container max-w-3xl mx-auto px-4 h-14 flex items-center justify-center">
-          <h1 className="text-lg font-semibold">[App Name]</h1>
-        </div>
-      </header>
-
+    <div className="flex flex-col flex-1">
       <main className="flex-1 container max-w-3xl mx-auto px-4 flex flex-col items-center justify-center gap-16">
         {activeGrid ? (
-          <div className="flex gap-12 items-center justify-center">
+          <div className="flex items-center w-full justify-around">
             {activeGrid.artists.map((artist) => (
               <Link
                 key={artist.id}
@@ -51,7 +45,7 @@ export default function LandingPage() {
 
         <Link href="/grid" className="block">
           <Button
-            variant="outline"
+            variant="neutral"
             size="icon"
             className={`
               rounded-full border-2 border-dashed

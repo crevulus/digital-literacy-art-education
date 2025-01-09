@@ -24,7 +24,7 @@ export function ArtistList({
   const canContribute = (id: string) => id !== lastContributorId;
 
   return (
-    <div className="flex items-center gap-6 overflow-x-auto pb-2 -mx-4 px-4">
+    <div className="flex items-center gap-6 overflow-x-auto py-2 -mx-4 px-4">
       {artists.map((artist) => (
         <div
           key={artist.id}
@@ -52,7 +52,6 @@ export function ArtistList({
 
       <div className="flex flex-col items-center gap-2">
         <Button
-          variant="outline"
           size="icon"
           className="w-16 h-16 rounded-full border-2 border-dashed"
           onClick={onAddArtist}

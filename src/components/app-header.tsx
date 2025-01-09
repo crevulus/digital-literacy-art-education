@@ -15,11 +15,11 @@ function AppHeader({
   title = "[App Name]",
 }: HeaderProps) {
   return (
-    <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+    <header className="border-b backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 bg-white">
       <div className="container max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
         {showIcons ? (
           <Button
-            variant="ghost"
+            variant="reverse"
             size="icon"
             className="rounded-full"
             onClick={onBack}
@@ -34,7 +34,7 @@ function AppHeader({
 
         {showIcons ? (
           <Button
-            variant="ghost"
+            variant="reverse"
             size="icon"
             onClick={onSave}
             className="rounded-full"

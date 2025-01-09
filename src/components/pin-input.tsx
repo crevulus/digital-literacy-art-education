@@ -43,7 +43,7 @@ export function PinInput({
   };
 
   return (
-    <div className="w-full max-w-xs sm:max-w-sm md:max-w-md space-y-6 p-4 sm:p-6 bg-card rounded-lg sm:rounded-xl shadow-md sm:shadow-lg">
+    <div className="w-full max-w-xs sm:max-w-sm md:max-w-md space-y-6 p-4 sm:p-6">
       <div className="flex flex-col items-center space-y-2">
         <Avatar className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
           <AvatarImage src={avatarUrl} alt={username} />
