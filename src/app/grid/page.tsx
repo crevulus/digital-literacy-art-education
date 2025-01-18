@@ -13,10 +13,7 @@ const initialGridData = ["1", "2"].map((emoji, index) => ({
   id: index.toString(),
   filled: emoji !== "❓",
   content: emoji,
-  thumbnail:
-    emoji !== "❓"
-      ? `/placeholder.svg?height=100&width=100&text=${emoji}`
-      : undefined,
+  thumbnail: "hi",
 }));
 
 export default function GridPage() {
@@ -46,7 +43,7 @@ export default function GridPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col w-full">
       {/* <AppHeader showIcons onSave={handleSave} /> */}
 
       <main className="flex-1 container max-w-3xl mx-auto px-4 py-4 space-y-6">

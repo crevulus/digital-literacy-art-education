@@ -40,7 +40,7 @@ export function ActiveGridList() {
           <li key={artist.id}>
             <Link href={`/pin-input?artist=${artist.id}`} passHref>
               <Button
-                variant="outline"
+                variant="default"
                 className="w-full justify-start gap-3 h-auto py-2 px-3 sm:px-4"
               >
                 <Avatar className="w-8 h-8 sm:w-10 sm:h-10">

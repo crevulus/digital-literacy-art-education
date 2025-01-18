@@ -1,7 +1,8 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
 import { PinInput } from "@/components/pin-input";
+import { INextPageProps } from "@/lib/types";
+import { use } from "react";
 // import { AppHeader } from '@/components/header'
 
 const mockArtists = [
@@ -31,9 +32,8 @@ const mockArtists = [
   },
 ];
 
-export default function PinInputPage() {
-  const searchParams = useSearchParams();
-  const artistId = searchParams.get("artist");
+export default function PinInputPage({ searchParams }: INextPageProps) {
+  const { artistId } = use(searchParams);
 
   const artist = mockArtists.find((a) => a.id === artistId) || mockArtists[0];
 
