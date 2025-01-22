@@ -20,10 +20,9 @@ export default function GridPage() {
   const router = useRouter();
   const [showExportModal, setShowExportModal] = useState(false);
   const [showAddArtistModal, setShowAddArtistModal] = useState(false);
-  const [lastContributorId] = useState<string>("1"); // Chris is the last contributor placeholder
+  const [lastContributorId] = useState<string>("1"); // placeholder
   const [gridData] = useState(initialGridData);
 
-  // Mock data for artists
   const artists = [
     { id: "1", name: "Chris", avatar: "/placeholder.svg?height=40&width=40" },
     { id: "2", name: "Mum", avatar: "/placeholder.svg?height=40&width=40" },

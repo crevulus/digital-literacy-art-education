@@ -21,7 +21,6 @@ export default {
         border: "var(--border)",
         ring: "var(--ring)",
         ringOffset: "var(--ring-offset)",
-
         secondaryBlack: "#212121",
       },
       borderRadius: {

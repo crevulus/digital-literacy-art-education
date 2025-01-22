@@ -8,3 +8,5 @@ export const COLOURS = [
   "#000000",
   "#FFFFFF",
 ];
+
+export const THEME_COLOUR = "#fd9745";

@@ -6,7 +6,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 
-// Mock data - in a real app this would come from your backend
 const mockActiveGrid = {
   id: "1",
   artists: [
@@ -17,7 +16,6 @@ const mockActiveGrid = {
 };
 
 export default function LandingPage() {
-  // In a real app, you'd fetch this data
   const [activeGrid] = useState(mockActiveGrid);
 
   return (

@@ -32,7 +32,7 @@ export function PinInput({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (pin.length === 4) {
-      const isValidPin = pin === "1234"; // This is a placeholder validation
+      const isValidPin = pin === "1234"; // placeholder
       setIsValid(isValidPin);
       if (isValidPin) {
         router.push(`/grid?artist=${artistId}`);

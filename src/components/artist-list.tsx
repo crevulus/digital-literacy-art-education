@@ -20,7 +20,6 @@ export function ArtistList({
   lastContributorId,
   onAddArtist,
 }: ArtistListProps) {
-  // Determine who can contribute next (everyone except the last contributor)
   const canContribute = (id: string) => id !== lastContributorId;
 
   return (
